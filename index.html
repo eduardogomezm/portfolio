@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Gómez Manzano | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: black;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .tech-icon {
+            transition: transform 0.3s ease;
+        }
+        .tech-icon:hover {
+            transform: translateY(-5px);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: black;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold">EDUARDO GOMEZ MANZANO</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-sm font-medium">HOME</a>
+                    <a href="#experience" class="nav-link text-sm font-medium">EXPERIENCE</a>
+                    <a href="#certifications" class="nav-link text-sm font-medium">CERTIFICATIONS</a>
+                    <a href="#contact" class="nav-link text-sm font-medium">CONTACT</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-md">
+            <a href="#home" class="block py-2 text-sm font-medium">HOME</a>
+            <a href="#experience" class="block py-2 text-sm font-medium">EXPERIENCE</a>
+            <a href="#certifications" class="block py-2 text-sm font-medium">CERTIFICATIONS</a>
+            <a href="#contact" class="block py-2 text-sm font-medium">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Eduardo Gómez Manzano</h1>
+                <h2 class="text-2xl md:text-3xl font-medium mb-6">SUPPORT TECHNICAL |SYSTEMS ANALYST | LINUX ANALYST</h2>
+                <p class="text-gray-700 mb-8 max-w-lg">
+                    I have over seven years of experience in the information technology field, building a solid and diverse career in key roles such as Technical Support,
+					Service Desk, Help Desk, Data Center Operations, and cybersecurity. My background reflects a constant commitment to technical excellence, efficient 
+					problem resolution, and the proactive protection of organizations' digital assets.
+					Throughout my career, I have had the opportunity to work in dynamic and highly demanding environments, where I have developed technical and soft skills
+					that allow me to quickly adapt to the challenges of the IT world. I am passionate not only about keeping systems running optimally, but also about 
+					anticipating threats, improving the user experience, and providing innovative solutions that drive business growth and security.
+					This portfolio is a reflection of my professional development, my achievements, and my dedication to the world of technology. 
+					I hope it helps you get to know me better and discover how I can add value to your team or project!
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#experience" class="bg-black text-white px-6 py-2 rounded-md font-medium hover:bg-gray-800 transition">My Work</a>
+                    <a href="#contact" class="border border-black px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 bg-gray-100 rounded-full overflow-hidden shadow-lg">
+                    <!-- Placeholder for profile image -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fas fa-user text-6xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-center mb-12">TECHNOLOGY STACK</h2>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-8">
+                <div class="flex flex-col items-center tech-icon">
+                    <i class="fab fa-azure text-4xl mb-2"></i>
+                    <span class="text-sm">Azure</span>
+                </div>
+                <div class="flex flex-col items-center tech-icon">
+                    <i class="fab fa-python text-4xl mb-2"></i>
+                    <span class="text-sm">Python</span>
+                </div>
+                <div class="flex flex-col items-center tech-icon">
+                    <i class="fas fa-database text-4xl mb-2"></i>
+                    <span class="text-sm">SQL</span>
+                </div>
+                <div class="flex flex-col items-center tech-icon">
+                    <i class="fab fa-gcp text-4xl mb-2"></i>
+                    <span class="text-sm">GCP</span>
+                </div>
+                <div class="flex flex-col items-center tech-icon">
+                    <i class="fab fa-bash text-4xl mb-2"></i>
+                    <span class="text-sm">Bash</span>
+                </div>
+                <div class="flex flex-col items-center tech-icon">
+                    <i class="fab fa-git-alt text-4xl mb-2"></i>
+                    <span class="text-sm">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 section-title">EXPERIENCE</h2>
+        
+        <div class="space-y-12">
+            <!-- Experience 1 -->
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="font-bold">Upwork</h3>
+                    <p class="text-gray-600 text-sm">March 2025 - Present</p>
+                </div>
+                <div class="md:w-3/4">
+                    <h3 class="font-bold text-xl mb-2">Freelance Consultant</h3>
+                    <p class="text-gray-700 mb-4">
+                        Security & Compliance: Proactively monitor and improve Microsoft 365
+						Security Scores, implement and manage Multi-Factor Authentication
+						(MFA) deployments, and configure data security settings.
+						Experience with Azure ID Active Directory, synchronization and identity
+						management.
+						Support Process, Tools & Internal Systems, ticket Management &
+						Escalation Handling.
+
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Experience 2 -->
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="font-bold">Capgemini</h3>
+                    <p class="text-gray-600 text-sm">Septembre 2023 - February 2025</p>
+                </div>
+                <div class="md:w-3/4">
+                    <h3 class="font-bold text-xl mb-2">Data Center Technical</h3>
+                    <p class="text-gray-700 mb-4">
+                        Quote HW (Boas) with Triara, Rondín Bunker C/24 Hrs, generate access to
+						HW, generate access to personnel, participation in internal scheduled	
+						windows, participation in external programmed windows participation in
+						change control, connect with console cable to the required equipment,
+						validate damaged disc, equipment rack, rack assembly, equipment
+						inventory, layout administration, generate HP cases, warehouse
+						administration, insurance erased with white image, secure Erase with Blank
+						Image
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Experience 3 -->
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="font-bold">Xpertal Global Services</h3>
+                    <p class="text-gray-600 text-sm">January 2012 - Septembre 2023</p>
+                </div>
+                <div class="md:w-3/4">
+                    <h3 class="font-bold text-xl mb-2">Data Center Technical</h3>
+                    <p class="text-gray-700 mb-4">
+                        Layout Management, Generate HP Cases, Warehouse Management,
+						Secure Erase with Blank Image, CA ServiceDesk Manager · BMC Helix
+						ITSM · Cyberark · HP Data Protector · Windows Server · VMware
+						Infrastructure · Microsoft SQL Server · Internet Information Services (IIS),
+						Veem Cloud Monitoring, Cluster Balancing, Assigning Permissions to
+						Network Folders
+                    </p>
+                </div>
+            </div>
+       
+		
+		 <!-- Experience 4 -->
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="font-bold">IDS Comercial</h3>
+                    <p class="text-gray-600 text-sm">Abril 2019 - June 2021</p>
+                </div>
+                <div class="md:w-3/4">
+                    <h3 class="font-bold text-xl mb-2">Technical Support Infrastructure</h3>
+                    <p class="text-gray-700 mb-4">
+                        CCTV, Biometric, Hamachi Central Administration, VPNS, IPS Nats
+						Assignment in Cisco Asa, Console Administration F-Secure Icloud, Azure
+						Active Directory, IPS block, domains, blacklist, console administration
+						Cisco Meraki, logs, graphics, blacklist, whitelist, network monitoring,
+						Cisco Administration, Cisco Administration Cisco, graphic, graphics
+						Network monitoring, backups, Microsoft Exchange
+                    </p>
+                </div>
+            </div>
+        </div>
+		
+		
+		
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">CERTIFICATIONS</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Certification 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified Hacking University. All in cybersecurity. Complete course</h3>
+                            <p class="text-gray-600 mb-2">Udemy | 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified Complete Course for OSINT. OF 0 to advanced</h3>
+                            <p class="text-gray-600 mb-2">Udemy | 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified Complete Course Linux Bash Shell Scripting</h3>
+                            <p class="text-gray-600 mb-2">Udemy | 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified The Complete SQL Bootcamp Go from Zero to Hero</h3>
+                            <p class="text-gray-600 mb-2">Udemy | 2025</p>
+                        </div>
+                    </div>
+                </div>
+				
+				<!-- Certification 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified CompTIA Security+</h3>
+                            <p class="text-gray-600 mb-2">Udemy | 2024</p>
+                        </div>
+                    </div>
+                </div>
+				
+				<!-- Certification 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified CompTIA Server+</h3>
+                            <p class="text-gray-600 mb-2">Udemy | 2024</p>
+                        </div>
+                    </div>
+                </div>
+				
+				<!-- Certification 7 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified  CompTIA Network+</h3>
+                            <p class="text-gray-600 mb-2">Udemy | 2024</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+				
+				<!-- Certification 8 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified Ethical Hacking Essentials (EHE)</h3>
+                            <p class="text-gray-600 mb-2">EC-Council | 2023</p>
+                        </div>
+                    </div>
+                </div>
+				
+				<!-- Certification 9 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-start">
+                        <div class="bg-black text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Certified LPIC-1 Administrator Linux</h3>
+                            <p class="text-gray-600 mb-2">Udemy | 2021</p>
+                        </div>
+                    </div>
+                </div>
+				
+            </div>
+        </div>
+    </section>
+	
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-black text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">GET IN TOUCH</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-medium mb-4">CONTACT INFORMATION</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-4 text-gray-300"></i>
+                            <span>oe.gomez.m@proton.me</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-4 text-gray-300"></i>
+                            <span>México</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-medium mb-4">CONNECT WITH ME</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/oeduardogm" target="_blank" class="bg-white text-black w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-900 border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full bg-gray-900 border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-900 border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-black px-6 py-2 rounded-md font-medium hover:bg-gray-200 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-gray-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 Eduardo GOMEZ MANZANO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                mobileMenu.classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
